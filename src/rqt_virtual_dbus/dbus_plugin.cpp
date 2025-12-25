@@ -124,7 +124,7 @@ void MyPlugin::updatePublisher() {
     if (state_ == ControlMode::PC) {
       if (!this->mouse_button_->isChecked()) {
         dbus_pub_data_.m_x = joy_stick_left_->x_display_;
-        dbus_pub_data_.m_y = -joy_stick_left_->y_display_;
+        dbus_pub_data_.m_y = joy_stick_left_->y_display_;
       }
     }
 
