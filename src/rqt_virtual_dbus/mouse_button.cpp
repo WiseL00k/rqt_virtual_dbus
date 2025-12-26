@@ -18,7 +18,7 @@ MouseButton::MouseButton(QWidget *parent, GlobalMouseInput *mouse)
   connect(esc_shortcut_, &QShortcut::activated, this, [=]() {
     mouse_->setMouseLockEnabled(false);
     mouse_->stop();
-    QGuiApplication::restoreOverrideCursor();
+    QGuiApplication::setOverrideCursor(Qt::ArrowCursor);
     this->setChecked(false);
   });
   connect(space_shortcut_, &QShortcut::activated, this, [=]() {
